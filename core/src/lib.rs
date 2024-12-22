@@ -1,4 +1,3 @@
-#![feature(stdarch_wasm_atomic_wait)]
 // Copyright 2016 Amanieu d'Antras
 //
 // Licensed under the Apache License, Version 2.0, <LICENSE-APACHE or
@@ -48,10 +47,9 @@
     all(
         feature = "nightly",
         target_family = "wasm",
-        target_feature = "atomics",
-        not(target_vendor = "wasmer")
+        target_feature = "atomics"
     ),
-    feature(stdsimd)
+    feature(thread_local, stdarch_wasm_atomic_wait)
 )]
 
 mod parking_lot;
