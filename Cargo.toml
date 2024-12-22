@@ -37,3 +37,6 @@ hardware-lock-elision = []
 
 [workspace]
 exclude = ["benchmark"]
+
+[patch.crates-io]
+libc = { git = "https://github.com/wasix-org/libc", branch = "master" }
