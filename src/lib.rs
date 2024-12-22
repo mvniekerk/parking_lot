@@ -11,6 +11,7 @@
 
 #![warn(missing_docs)]
 #![warn(rust_2018_idioms)]
+#![feature(stdarch_wasm_atomic_wait)]
 
 mod condvar;
 mod elision;
