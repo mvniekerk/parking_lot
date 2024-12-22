@@ -59,9 +59,8 @@
         target_feature = "atomics",
         target_vendor = "wasmer"
     ),
-    feature(unix)
+    feature(stdarch_wasm_atomic_wait)
 )]
-#![feature(stdarch_wasm_atomic_wait)]
 
 mod parking_lot;
 mod spinwait;
