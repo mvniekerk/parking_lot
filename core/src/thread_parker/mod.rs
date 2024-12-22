@@ -54,7 +54,8 @@ cfg_if! {
     if #[cfg(any(target_os = "linux", target_os = "android"))] {
         #[path = "linux.rs"]
         mod imp;
-    } else if #[cfg(any(unix, all(target_family = "wasm", target_os = "wasi", target_vendor = "wasmer")))] {
+    // } else if #[cfg(any(unix, all(target_family = "wasm", target_os = "wasi", target_vendor = "wasmer")))] {
+    } else if #[cfg(unix)] {
         #[path = "unix.rs"]
         mod imp;
     } else if #[cfg(windows)] {
