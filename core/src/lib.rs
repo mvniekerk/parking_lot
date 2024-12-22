@@ -52,7 +52,15 @@
     ),
     feature(stdsimd)
 )]
-// #![feature(stdarch_wasm_atomic_wait)]
+#![cfg_attr(
+    all(
+        feature = "nightly",
+        target_family = "wasm",
+        target_feature = "atomics",
+        not(target_vendor = "wasmer")
+    ),
+    feature(stdarch_wasm_atomic_wait)
+)]
 
 mod parking_lot;
 mod spinwait;
