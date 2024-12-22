@@ -1,3 +1,4 @@
+#![feature(stdarch_wasm_atomic_wait)]
 // Copyright 2016 Amanieu d'Antras
 //
 // Licensed under the Apache License, Version 2.0, <LICENSE-APACHE or
