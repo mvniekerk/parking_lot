@@ -52,7 +52,7 @@
     ),
     feature(stdsimd)
 )]
-#![feature(stdarch_wasm_atomic_wait)]
+// #![feature(stdarch_wasm_atomic_wait)]
 
 mod parking_lot;
 mod spinwait;
